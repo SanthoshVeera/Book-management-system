@@ -1,0 +1,23 @@
+<h1>{{appTitle}}</h1>
+<br>
+
+Title :    <input [(ngModel)]="title" type="text" placeholder="Enter Title here" >
+<br>
+<br>
+
+Author : <input [(ngModel)]="author" type="text" placeholder="Enter Aunthor name here">
+<br>
+<br>
+<button (click)="addBook()">Add Book</button>
+
+
+<br>
+<br>
+
+<h5>My own library </h5>
+
+<ul>
+    <li *ngFor="let book of myBooks; index as i">
+    {{book.id + 1}}) {{book.title}} - written by {{book.author}}
+    </li>
+</ul>
